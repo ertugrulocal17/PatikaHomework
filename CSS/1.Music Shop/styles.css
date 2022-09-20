@@ -1,0 +1,83 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Gideon Roman', cursive;
+    font-family: 'Karla', sans-serif;
+    background-color: #F5F5F5;
+
+}
+header{
+    background-color: #30475E;
+    color: #F5F5F5;
+    text-align: center;
+    text-transform: uppercase;
+}
+header h1{
+    margin: 0;
+}
+
+nav ul{
+    padding: 0px;
+    display: inline-flex;
+    list-style-type: none;
+}
+nav ul li {
+    padding: 0 10px;
+
+}
+nav a{
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+/* Main Container Style Start */ 
+.container{
+    margin: 10px 60px;
+}
+.container h2{
+    text-align: center;
+    
+}
+
+.container h3{
+    text-align: center;
+}
+.container ul{
+    padding: 0;
+    margin-bottom: 160px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.container ul li{
+    padding: 10px;
+    font-size: xx-large;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.container ul li img{
+    height: 200px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* Footer Styles Start */
+footer{
+    height: 30px;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #30475E;
+    color: #F5F5F5;
+}
+footer p{
+    margin: 0;
+}
+
+
+/* priducts style */
+.products-price{
+    font-size: medium;
+}
