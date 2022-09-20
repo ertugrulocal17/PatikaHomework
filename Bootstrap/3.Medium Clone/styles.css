@@ -1,0 +1,81 @@
+body{
+    font-family: 'PT Serif', serif;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+header{
+    background-color: #C4E2FF; 
+    border-bottom: 1px solid #292929;
+}
+header .container{
+    padding: 0 35px 0 50px;
+}
+header .navbar{
+    height: 75px;
+}
+header .nav-item{
+    margin-right: 15px;
+}
+header .nav-link{
+    font-weight: 400;
+    font-size: 13px;
+
+}
+
+header svg{
+    width: 162px;
+}
+
+.main-container{
+    padding: 0 115px;
+    background-color: #C4E2FF;
+    border-bottom: 1px solid #292929;
+}
+
+.main-container h1{
+    font-size: 70px;
+    margin-bottom: 0px;
+}
+.main-container h3{
+    font-size: 18px;
+    font-weight: 400px;
+    color: rgba(41, 41, 41, 1);
+    padding-right: 100px;
+}
+.main-container .btn{
+    color: #000;
+    border-color: #000;
+    background: #fff;
+    fill: rgba(41, 41, 41, 1);
+    padding: 7px 20px 9px;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 99em;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 15px;
+
+}
+
+.short-buttons{
+    background-color: #FFF; 
+    border-radius:3px; 
+    border: 1px solid #757575; 
+    margin:8px 8px 8px 0; 
+    padding: 6px 16px;
+    display:inline-block; 
+    box-sizing:initial; 
+    color:#757575; 
+    font-size: 13px; 
+    font-weight: 400;
+}
+
+ul .nav-link{
+    color:#757575; 
+    font-size: 14px; 
+    font-weight: 400;
+}

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" href="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png">
+
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Main CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" style=" height: 60px; background-color: #FFFFFF; border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);">
+            <div class="offset-2 col-10">
+                <div class="row">
+                    <div class="col-4" style="padding-left:50px">
+                        <div class="col-4" style="margin-top: 4px;">
+                            <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" width="103px" alt="">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <form class="d-flex inline">
+                            <input class="form-control " type="search" placeholder="Search" aria-label="Search" style="width: 268px; background: rgba(var(--bb2,239,239,239),1);
+                            font-size: 16px; color:#8e8e8e; border-radius: 8px; border: 0ch; padding-left: 20px;">
+                          </form>
+                    </div>
+                    <div class="col-5">
+                        <ul class="nav" style="margin-top: 4px; padding: 0 30px">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg aria-label="Home" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z"></path></svg>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg aria-label="Messenger" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12.003 2.001a9.705 9.705 0 110 19.4 10.876 10.876 0 01-2.895-.384.798.798 0 00-.533.04l-1.984.876a.801.801 0 01-1.123-.708l-.054-1.78a.806.806 0 00-.27-.569 9.49 9.49 0 01-3.14-7.175 9.65 9.65 0 0110-9.7z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.739"></path><path d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z" fill-rule="evenodd"></path></svg>
+                                </a>
+                              </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                <svg aria-label="New Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg aria-label="Find People" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon><polygon fill-rule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon><circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle></svg>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <svg aria-label="Activity Feed" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img class="rounded-circle border border-dark"src="https://pbs.twimg.com/profile_images/1455864531163484162/rkhx1wmz_400x400.jpg"  width="26px" alt="Avatar">
+                                   </a>
+                              </li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+    
+    <!-- Main Container Start-->
+    <div class="container">
+        <!-- Main Header Part Start -->
+        <div class="row" style="margin-top: 60px ;">
+            <!-- Story Part Start -->
+            <div class="offset-2 col-6" style="margin-top: 30px; background-color: #FFFFFF;
+            border: 1px solid #DBDBDB;
+            border-radius: 3px;
+            margin-bottom: 24px;
+            padding: 16px 16px;">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1455864531163484162/rkhx1wmz_400x400.jpg" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>kodluyoruz</figcaption>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1481647596410077194/7JbUteIn_400x400.png" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>lalmzr</figcaption>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1360317534172569614/sdir3Sab_400x400.jpg" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>patika.dev</figcaption>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1414990564408262661/r6YemvF9_400x400.jpg" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>github</figcaption>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1276770212927410176/qTgTIejk_400x400.jpg" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>freecodecamp</figcaption>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1415325668787855361/nxZY4zVv_400x400.png" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>udemy</figcaption>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1338839422851112964/-_P3vI9j_400x400.png" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>coursera</figcaption>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#">
+                        <img class="rounded-circle" width="56" src="https://pbs.twimg.com/profile_images/1383051520275587075/njoDAauC_400x400.jpg" style="border:1px solid #DBDBDB" alt="">
+                        <figcaption>edxonline</figcaption>
+                    </a>
+                </li>
+            </ul>              
+            </div>
+            <!-- Story Part End -->
+
+            <!-- User Info Right Side Start -->
+            <div class="col-3" style="margin-top: 30px; margin-left: 5px">
+                <div class="row" style="padding:16px 0">
+                    <div class="col-8 d-inline-flex">
+                        <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1455864531163484162/rkhx1wmz_400x400.jpg" width="56px">
+                        <ul class="nav flex-column lh-sm justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <strong style="font-size: 12px; font-weight: 600; color:#262626">kodluyoruz</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <strong style="color:#8e8e8e; font-weight: 400; font-size: 14px;">Kodluyoruz</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-1" style="padding-top: 16px;">
+                        <strong style="font-size: 12px; font-weight: 600; color:#0095F6;">Switch</strong>
+                    </div>
+                </div>
+                <div class="row" style="margin-left:5px">
+                    <div class="col-8 d-inline-flex">
+                        <strong style="font-size: 14px; font-weight: 600; color:#8C8C8C;">Suggestions For You</strong>
+                    </div>
+                    <div class="col-3 d-inline-flex">
+                        <strong style="font-size: 12px; font-weight: 600; color:#262626; padding: auto;">See All</strong>
+                    </div>
+                </div>
+            </div>
+            <!-- User Info Right Side End -->
+        </div>
+        <!-- Main Header Part End -->
+
+        <!-- Main Content Part Start -->
+        <div class="row">
+            <!-- Main Part Start -->
+            <div class="offset-2 col-6" style="background-color: #FFFFFF;
+            border-radius: 3px;
+            border:1px solid #DBDBDB;
+            margin-bottom: 24px;">
+                <div class="container" style="padding: 0;">
+                    <div class="row"style="border-bottom: 1px solid #EFEFEF">
+                        <div class="col-11" style="padding-top: 14px; padding-bottom: 14px;">
+                            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1455864531163484162/rkhx1wmz_400x400.jpg" width="32px" style="border: 1px solid #DBDBDB; margin-right:8px;" alt="">
+                        <strong style="font-weight: 500;">kodluyoruz</strong>
+                        </div>
+                        <div class="col-1" style="padding-top: 14px; padding-bottom: 14px;">
+                            <a href="#">
+                                <svg aria-label="More options" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+                            </a>
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="padding: 0;">
+                            <img src="https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 8px; margin-bottom: 8px;">
+                        <div class="col-11">
+                            <svg aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                            <svg style="margin:0 10px" aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                            <svg aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="col-1">
+                            <svg aria-label="Save" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="row" style="margin-top: 8px;">
+                            <div class="col-12">
+                                <strong style="font-weight: 500;">9,876 likes</strong>
+                            </div>
+                        </div>   
+                        <div class="row">
+                            <div class="col-12">
+                                <strong style="font-weight: 500;">kodluyoruz ❤️</strong>
+                            </div>
+                        </div>   
+                        <div class="row">
+                            <div class="col-12">
+                                <strong style="font-weight: 400; color: #8e8e8e;">View all 54 comments</strong>
+                            </div>
+                        </div>  
+                        <div class="row">
+                            <div class="col-12">
+                                <strong style="font-size: 10px; font-weight: 500; color: #8e8e8e;">4 HOURS AGO</strong>
+                            </div>
+                        </div> 
+                        <div class="row" style="margin:6px 0px; padding-top:8px; border-top: 1px solid #EFEFEF" >
+                            <div class="col-11">
+                                <svg style="margin-right:8px; cursor:pointer"aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
+                                <strong style="font-weight: 400; color: #8e8e8e;">Add a comment...</strong>  
+                            </div>
+                            <div class="col-1">
+                                <strong style="font-weight: 600; font-size: 15px; cursor:pointer; color: #C0E0FD;">POST</strong>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Main Part End -->
+            <!-- Right Side Start -->
+            <div class="col-3" style="margin-left: 5px">
+                <div class="row" style="padding-bottom: 16px;">
+                    <div class="col-8 d-inline-flex">
+                        <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1481647596410077194/7JbUteIn_400x400.png" width="40px" height="40px">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link lh-1" href="#">
+                                  <strong style="font-size: 12px; font-weight: 600; color:#262626">lalmzr</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <strong style="color:#8e8e8e; font-weight: 400; font-size: 14px;">Lal Mazari</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-1" style="padding: 5px 5px;">
+                        <a class="nav-link" href="#">
+                            <strong style="font-size: 12px; font-weight: 600; color:#0095F6;">Follow</strong>
+                        </a>  
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 16px;">
+                    <div class="col-8 d-inline-flex">
+                        <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1360317534172569614/sdir3Sab_400x400.jpg" width="40px" height="40px">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link lh-1" href="#">
+                                  <strong style="font-size: 12px; font-weight: 600; color:#262626">patika.dev</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <strong style="color:#8e8e8e; font-weight: 400; font-size: 14px;">Patika Dev</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-1" style="padding: 5px 5px;">
+                        <a class="nav-link" href="#">
+                            <strong style="font-size: 12px; font-weight: 600; color:#0095F6;">Follow</strong>
+                        </a>  
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 16px;">
+                    <div class="col-8 d-inline-flex">
+                        <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1414990564408262661/r6YemvF9_400x400.jpg" width="40px" height="40px">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link lh-1" href="#">
+                                  <strong style="font-size: 12px; font-weight: 600; color:#262626">github</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <strong style="color:#8e8e8e; font-weight: 400; font-size: 14px;">GitHub</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-1" style="padding: 5px 5px;">
+                        <a class="nav-link" href="#">
+                            <strong style="font-size: 12px; font-weight: 600; color:#0095F6;">Follow</strong>
+                        </a>  
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 16px;">
+                    <div class="col-8 d-inline-flex">
+                        <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1276770212927410176/qTgTIejk_400x400.jpg" width="40px" height="40px">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link lh-1" href="#">
+                                  <strong style="font-size: 12px; font-weight: 600; color:#262626">freecodecamp</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <strong style="color:#8e8e8e; font-weight: 400; font-size: 14px;">freeCodeCamp.org</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-1" style="padding: 5px 5px;">
+                        <a class="nav-link" href="#">
+                            <strong style="font-size: 12px; font-weight: 600; color:#0095F6;">Follow</strong>
+                        </a>  
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 25px;">
+                    <div class="col-8 d-inline-flex">
+                        <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1415325668787855361/nxZY4zVv_400x400.png" width="40px" height="40px">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link lh-1" href="#">
+                                  <strong style="font-size: 12px; font-weight: 600; color:#262626">udemy</strong>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                  <strong style="color:#8e8e8e; font-weight: 400; font-size: 14px;">Udemy</strong>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-1" style="padding: 5px 5px;">
+                        <a class="nav-link" href="#">
+                            <strong style="font-size: 12px; font-weight: 600; color:#0095F6;">Follow</strong>
+                        </a>  
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 20px;">
+                    <div class="col">
+                        <ul class="nav nav-link" style="font-size: 11px; font-weight: 400; line-height: 13px; ">
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:#8C8C8C" href="#">About · Help · Press · API · Jobs · Privacy · Terms · Location · Top Accounts · Hashtags · Language</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col">
+                        <ul class="nav nav-link" style="font-size: 11px; font-weight: 400; line-height: 13px; ">
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:#8C8C8C" href="#"> © 2022 INSTAGRAM FROM META</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Side End -->
+        </div>
+        <div class="row">
+            <!-- Main Part Start -->
+            <div class="offset-2 col-6" style="background-color: #FFFFFF;
+            border-radius: 3px;
+            border:1px solid #DBDBDB;
+            margin-bottom: 24px;">
+                <div class="container" style="padding: 0;">
+                    <div class="row"style="border-bottom: 1px solid #EFEFEF">
+                        <div class="col-11" style="padding-top: 14px; padding-bottom: 14px;">
+                            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1477936468496556035/BhitSnqG_400x400.jpg" width="32px" style="border: 1px solid #DBDBDB; margin-right:8px;" alt="">
+                        <strong style="font-weight: 500;">hackerrank</strong>
+                        </div>
+                        <div class="col-1" style="padding-top: 14px; padding-bottom: 14px;">
+                            <a href="#">
+                                <svg aria-label="More options" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+                            </a>
+            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="padding: 0;">
+                            <img src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 8px; margin-bottom: 8px;">
+                        <div class="col-11">
+                            <svg aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                            <svg style="margin:0 10px" aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                            <svg aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="col-1">
+                            <svg aria-label="Save" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                        </div>
+                        <div class="row" style="margin-top: 8px;">
+                            <div class="col-12">
+                                <strong style="font-weight: 500;">10,876 likes</strong>
+                            </div>
+                        </div>   
+                        <div class="row">
+                            <div class="col-12">
+                                <strong style="font-weight: 500;">hackerrank 💻</strong>
+                            </div>
+                        </div>   
+                        <div class="row">
+                            <div class="col-12">
+                                <strong style="font-weight: 400; color: #8e8e8e;">View all 98 comments</strong>
+                            </div>
+                        </div>  
+                        <div class="row">
+                            <div class="col-12">
+                                <strong style="font-size: 10px; font-weight: 500; color: #8e8e8e;">8 HOURS AGO</strong>
+                            </div>
+                        </div> 
+                        <div class="row" style="margin:6px 0px; padding-top:8px; border-top: 1px solid #EFEFEF" >
+                            <div class="col-11">
+                                <svg style="margin-right:8px; cursor:pointer"aria-label="Emoji" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
+                                <strong style="font-weight: 400; color: #8e8e8e;">Add a comment...</strong>  
+                            </div>
+                            <div class="col-1">
+                                <strong style="font-weight: 600; font-size: 15px; cursor:pointer; color: #C0E0FD;">POST</strong>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    <!-- Main Container End-->
+
+    <!-- Bootstrap JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+<!--
+ -->

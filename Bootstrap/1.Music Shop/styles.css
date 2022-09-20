@@ -1,0 +1,13 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Gideon Roman', cursive;
+    font-family: 'Karla', sans-serif;
+    background-color: #E9ECEF;
+
+}
+
+p{
+    text-align: justify;
+}
