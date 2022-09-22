@@ -1,0 +1,8 @@
+{
+  "main": "jsonData.js",
+  "type": "module",
+
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
