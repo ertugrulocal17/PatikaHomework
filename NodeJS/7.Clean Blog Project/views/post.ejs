@@ -1,0 +1,49 @@
+<!-- Head -->
+<%- include('partials/_header') -%>
+
+<body>
+
+  <!-- Navigation -->
+  <%- include('partials/_navigation') -%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('/img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1><%= post.title %></h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1><%= post.title %></h1>
+            <span class="meta"><%= post.createdDate %></span>
+          </div>
+          <p><%= post.detail %></p>
+          <a href="/posts/edit/<%= post._id %>" type="submit" class="btn btn-primary" >EDIT POST</a>
+          <a  href="/posts/<%= post._id %>?_method=DELETE" class="btn btn-danger" onclick="return confirm('This POST Will Deleted Permanently! ')">DELETE POST</a>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <%- include('partials/_footer') -%>
+
+</body>
+
+</html>
