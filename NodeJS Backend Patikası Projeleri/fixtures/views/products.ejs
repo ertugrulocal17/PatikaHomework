@@ -1,0 +1,158 @@
+<%- include('partials/_header') -%>
+      <!-- end header -->
+
+<div class="contactus">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="title">
+          <h2>Our Product</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ourproduct">
+  <div class="container">
+    
+
+    <div class="col-md-12 mt-3">
+      <form class="bottom_form" method="GET" action="/products">
+        <input
+          type="text"
+          name="search"
+          class="form-control rounded"
+          placeholder="Search"
+        />
+        <button value="Search" type="submit"></button>
+      </form>
+    </div>
+   <div class="col-md-12 d-flex my-3">
+      <strong>CATEGORY:</strong>
+      <% for (let i=0; i< categories.length; i++) { %>
+      <li>
+        <a href="/products?categories=<%= categories[i].slug %>" class="m-2">
+          <%= categories[i].name %></a
+        >
+      </li>
+      <% } %>
+    </div>
+
+
+     <div class="row product_style_3" ">
+        <!-- product -->
+        <% for (let i = 0; i < products.length; i++) { %>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="full product">
+            <div class="product_img">
+              <div class="center"> <img src="icon/p1.png" alt="#"/>
+                <div class="overlay_hover"> <a class="add-bt" href="products/<%= products[i].slug %>">+ Add to cart</a> </div>
+              </div>
+            </div>
+            <div class="product_detail text_align_center">
+              <p class="product_price">$<%= products[i].price %> <span class="old_price">$679.89</span></p>
+              <p class="product_descr"><%= products[i].name %> </p>
+            </div>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  </div>
+</div>
+
+<!--  footer --> 
+<%- include('partials/_footer') -%>
+
+
+              <!-- end product -->
+      <!-- product -->
+      <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="full product">
+          <div class="product_img">
+            <div class="center"> <img src="icon/p1.png" alt="#"/>
+              <div class="overlay_hover"> <a class="add-bt" href="product_detail3.html">+ Add to cart</a> </div>
+            </div>
+          </div>
+          <div class="product_detail text_align_center">
+            <p class="product_price">$679.89 <span class="old_price">$679.89</span></p>
+            <p class="product_descr">Lightweight Down Puffer Coat</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- end product -->
+      <!-- product -->
+      <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="full product">
+          <div class="product_img">
+            <div class="center"> <img src="icon/p2.png" alt="#"/>
+              <div class="overlay_hover"> <a class="add-bt" href="product_detail3.html">+ Add to cart</a> </div>
+            </div>
+          </div>
+          <div class="product_detail text_align_center">
+            <p class="product_price">$679.89 <span class="old_price">$679.89</span></p>
+            <p class="product_descr">Lightweight Down Puffer Coat</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- end product -->
+      <!-- product -->
+      <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="full product">
+          <div class="product_img">
+            <div class="center"> <img src="icon/p3.png" alt="#"/>
+              <div class="overlay_hover"> <a class="add-bt" href="product_detail3.html">+ Add to cart</a> </div>
+            </div>
+          </div>
+          <div class="product_detail text_align_center">
+            <p class="product_price">$679.89 <span class="old_price">$679.89</span></p>
+            <p class="product_descr">Lightweight Down Puffer Coat</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- end product -->
+      <!-- product -->
+      <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="full product">
+          <div class="product_img">
+            <div class="center"> <img src="icon/p4.png" alt="#"/>
+              <div class="overlay_hover"> <a class="add-bt" href="product_detail3.html">+ Add to cart</a> </div>
+            </div>
+          </div>
+          <div class="product_detail text_align_center">
+            <p class="product_price">$679.89 <span class="old_price">$679.89</span></p>
+            <p class="product_descr">Lightweight Down Puffer Coat</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- end product -->
+      <!-- product -->
+      <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="full product">
+          <div class="product_img">
+            <div class="center"> <img src="icon/p1.png" alt="#"/>
+              <div class="overlay_hover"> <a class="add-bt" href="product_detail3.html">+ Add to cart</a> </div>
+            </div>
+          </div>
+          <div class="product_detail text_align_center">
+            <p class="product_price">$679.89 <span class="old_price">$679.89</span></p>
+            <p class="product_descr">Lightweight Down Puffer Coat</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- end product -->
+      <!-- product -->
+      <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+        <div class="full product">
+          <div class="product_img">
+            <div class="center"> <img src="icon/p2.png" alt="#"/>
+              <div class="overlay_hover"> <a class="add-bt" href="product_detail3.html">+ Add to cart</a> </div>
+            </div>
+          </div>
+          <div class="product_detail text_align_center">
+            <p class="product_price">$679.89 <span class="old_price">$679.89</span></p>
+            <p class="product_descr">Lightweight Down Puffer Coat</p>
+          </div>
+        </div>
+      </div> -->
+      <!-- end product -->

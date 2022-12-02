@@ -1,0 +1,108 @@
+
+<!-- contact section start -->
+<!-- <div class="contact_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h1 class="contact_taital contact_heading">Login</h1>
+         </div>
+      </div>
+      <div class="contact_section_2">
+
+         <div class="row">
+
+            <div class="offset-md-2 col-md-8">
+               <% if (flashMessages) { %>
+
+                  <% if (flashMessages.success) { %>
+                      <div class="alert alert-success">
+                          <%= flashMessages.success %>
+                      </div>
+          
+                  <% } else if (flashMessages.error) { %>
+                      <div class="alert alert-danger">
+                          <%= flashMessages.error %>
+                      </div>
+                  <% } %>
+          
+              <% } %>
+               <div class="mail_section map_form_container">
+                  <form method="POST" action="users/login">
+                    <input type="email" class="mail_text" placeholder="Email" name="email" id="email">
+                     <input type="password" class="mail_text" placeholder="Password" name="password" id="password">
+                     
+                     <div class="btn_main send_bt">
+                        <button type="submit">Login</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div> -->
+<!-- contact section end -->
+
+<%- include('partials/_header') -%>
+<!-- end header -->
+<div class="contactus">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="title">
+          <h2>Login</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about">
+  <div class="container">
+   <div class="row">
+
+      <div class=" offset-3 col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
+         <% if (flashMessages) { %>
+
+            <% if (flashMessages.success) { %>
+                <div class="alert alert-success">
+                    <%= flashMessages.success %>
+                </div>
+    
+            <% } else if (flashMessages.error) { %>
+                <div class="alert alert-danger">
+                    <%= flashMessages.error %>
+                </div>
+            <% } %>
+    
+        <% } %>
+        <form class="main_form" method="POST" action="users/login" novalidate>
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <input
+                class="form-control"
+                placeholder="Email"
+                type="text"
+                name="email"
+              />
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+               <input
+                 class="form-control"
+                 placeholder="Password"
+                 type="password"
+                 name="password"
+               />
+             </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <button class="send" type="submit">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  footer -->
+<%- include('partials/_footer') -%>

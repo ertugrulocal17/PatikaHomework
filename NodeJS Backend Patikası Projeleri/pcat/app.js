@@ -11,11 +11,11 @@ const photoRoute = require('./routes/photoRoute')
 const app = express();
 
 //connect DB
-mongoose.connect(`mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@cluster0.vwx1uh2.mongodb.net/photos?retryWrites=true&w=majority`, {
+mongoose.connect(`${process.env.MONGODB_LINK}`, {
   useNewUrlParser: true,
-}).then(()=> {
+}).then(() => {
   console.log('DB CONNECTED!')
-}).catch((err)=> {
+}).catch((err) => {
   console.log(err)
 })
 

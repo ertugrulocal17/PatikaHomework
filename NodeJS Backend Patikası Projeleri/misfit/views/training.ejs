@@ -1,0 +1,51 @@
+<%- include('partials/_header') -%>
+<%- include('partials/_navigation') -%>
+<!-- end header -->
+<div class="back_re">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="title">
+               <h2>Trainer: <%= training.user.name %></h2>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- trainers -->
+<div class="about">
+   <div class="container">
+      <div class="row d_flex">
+         <div class="col-md-5">
+            <div class="titlepage">
+               <h2><%= training.trainingTime %></h2>
+               <h1><%= training.category.name %></h1>
+               <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using  </p>
+               <% if (user && !(user.trainings.includes(training._id))){%>
+               <form method="POST" action="/trainings/enrollTraining">
+                  <input type="hidden" name="training_id" value="<%= training.id %>"/>
+                  <button class="read_more"><span>Enroll to Training</span></button>
+               </form>
+               <% } %>
+            </div>
+         </div>
+         <div class="col-md-7">
+            <div class="about_img">
+               <figure><img src="/images/about.jpg" alt="#"/></figure>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end trainers -->
+<%- include('partials/_footer') -%>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<%- include('partials/_header') -%> <%- include('partials/_navigation') -%>
+<!-- end header -->
+<div class="back_re">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2>Our Training Courses</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- trainers -->
+
+<div class="trainers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <p>Lorem Ipsum available, but the majority have suffered</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <form class="bottom_form" method="GET" action="/trainings">
+        <input
+          type="text"
+          name="search"
+          class="form-control rounded"
+          placeholder="Search Training Class"
+        />
+        <button value="Search" type="submit"></button>
+      </form>
+    </div>
+   <div class="col-md-12 d-flex my-3 text-white">
+      <strong>CATEGORY:</strong>
+      <% for (let i=0; i< categories.length; i++) { %>
+      <li>
+        <a href="/trainings?categories=<%= categories[i].slug %>" class="m-2 text-white">
+          <%= categories[i].name %></a
+        >
+      </li>
+      <% } %>
+    </div>
+    <div class="row">
+      <% for (let i = 0; i < trainings.length; i++) { %>
+  
+      <div class="col-md-4">
+        <div id="trai" class="trainer_box">
+          <div class="trainer_img">
+            <figure><img src="/images/tra.jpg" alt="#" /></figure>
+          </div>
+          <div class="trainer">
+            <a href="/trainings/<%= trainings[i].slug %>">
+              <h3><%= trainings[i].trainingTime %></h3>
+              <p><%= trainings[i].category.name %></p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+<!-- end trainers -->
+<%- include('partials/_footer') -%>

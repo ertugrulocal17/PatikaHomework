@@ -1,0 +1,431 @@
+<%- include('partials/_header') -%> <%- include('partials/_navigation') -%>
+<!-- end header -->
+<% if(user){ %> <% if(user.role === 'Student'){ %> }
+
+<!-- Title -->
+<div class="back_re">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2><%= user.name %></h2>
+          <h2>Enrolled Training Courses</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- trainers -->
+<div class="trainers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <p>Lorem Ipsum available, but the majority have suffered</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% for (let i = 0; i < user.trainings.length; i++) { %>
+      <div class="col-md-4">
+        <div id="trai" class="trainer_box">
+          <div class="trainer_img">
+            <figure><img src="/images/tra.jpg" alt="#" /></figure>
+          </div>
+          <div class="trainer">
+            <h3><%= categories[i].name %></h3>
+            <p><%= user.trainings[i].trainingTime %></p>
+            <% if (!(user.trainings.includes(trainings._id))) {%>
+            <form method="POST" action="/trainings/release">
+              <input
+                type="hidden"
+                name="training_id"
+                value="<%= user.trainings[i].id %>"
+              />
+              <button class="read_more" type="submit">
+                <span>RELEASE</span>
+              </button>
+            </form>
+            <% } %>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% } %> <% if(user.role === 'Trainer'){ %> 
+<div class="back_re">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2><%= user.name %></h2>
+          <h4 class="text-white">TRAINER</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button
+        type="button"
+        class="btn read_more"
+        data-toggle="modal"
+        data-target="#exampleModal"
+      >
+        Create Traning
+      </button>
+    </div>
+  </div>
+</div>
+<div class="trainers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <p>Lorem Ipsum available, but the majority have suffered</p>
+        </div>
+        <% if (flashMessages) { %>
+
+          <% if (flashMessages.success) { %>
+              <div class="alert alert-success">
+                  <%= flashMessages.success %>
+              </div>
+  
+          <% } else if (flashMessages.error) { %>
+              <div class="alert alert-danger">
+                  <%= flashMessages.error %>
+              </div>
+          <% } %>
+  
+      <% } %>
+      </div>
+    </div>
+    <div class="row">
+      <% for (let i = 0; i < trainings.length; i++) { %>
+      <div class="col-md-4">
+        <div id="trai" class="trainer_box">
+          <div class="trainer_img">
+            <figure><img src="/images/tra.jpg" alt="#" /></figure>
+          </div>
+          <div class="trainer">
+            <a href="/trainings/<%= trainings[i].slug %>">
+              <h3><%= trainings[i].trainingTime %></h3>
+              <p><%= trainings[i].category.name %></p></a
+            >
+          </div>
+          <div class="d-flex justify-content-around pb-1">
+            <button
+              class="sub_btn"
+              data-toggle="modal"
+              data-target="#updateTraining<%= trainings[i]._id %>"
+            >
+              Edit
+            </button>
+
+              <a
+              class="sub_btn text-center"
+              onclick="return confirm('ARE YOU SURE')"
+  
+              href="/trainings/<%= trainings[i].slug %>?_method=DELETE"
+              >
+              <stron>Delete</stron>
+            </a>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Update Modal -->
+      <div
+        class="modal fade"
+        id="updateTraining<%= trainings[i]._id %>"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Update Training Class
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form
+                id="request"
+                class="main_form"
+                method="POST"
+                action="/trainings/<%= trainings[i].slug %>?_method=PUT"
+              >
+                <div class="row">
+                  <div class="col-md-12">
+                    <input
+                      class="contactus"
+                      placeholder="Training Time"
+                      value="<%= trainings[i].trainingTime %>"
+                      type="type"
+                      name="trainingTime"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                  <select class="contactus" type="type" name="category"> 
+                     <% for(let i=0; i< categories.length; i++){ %>
+                        <option value="<%= categories[i]._id %>"><%= categories[i].name %></option>
+                        <% } %>
+                  </select>                          
+               </div>
+                  <div class="col-md-12">
+                    <input
+                      class="contactus"
+                      value="Trainer"
+                      type="hidden"
+                      name="role"
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <button class="send_btn" type="submit">Submit</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</div>
+
+<!-- Create training Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Create New Training Class
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="request" class="main_form" method="POST" action="/trainings">
+          <div class="row">
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Training Time"
+                type="type"
+                name="trainingTime"
+              />
+            </div>
+            <div class="col-md-12">
+              <select class="contactus" type="type" name="category">
+                <% for(let i=0; i< categories.length; i++){ %>
+                <option value="<%= categories[i]._id %>">
+                  <%= categories[i].name %>
+                </option>
+                <% } %>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                value="Trainer"
+                type="hidden"
+                name="role"
+              />
+            </div>
+            <div class="col-md-12">
+              <button class="send_btn" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %> <% if(user.role === 'admin'){ %>
+<div class="back_re">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <h2><%= user.name %></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Users -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mt-5">
+      <h1>Users</h1>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID#</th>
+          <th scope="col">Email</th>
+          <th scope="col">Role</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i=0; i< users.length; i++) { %>
+        <tr>
+          <th scope="row"><%=users[i]._id %></th>
+          <td><%=users[i].email %></td>
+          <td><%=users[i].role %></td>
+          <td>
+            <a
+              href="/users/<%= users[i]._id %>?_method=DELETE"
+              onclick="return confirm('ARE YOU SURE')"
+              class="btn btn-danger rounded-0 text-white"
+              ><span>DELETE</span></a
+            >
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Category -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h1>Categories</h1>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-md-12">
+      <button
+        class="btn btn-lg btn-warning rounded-0 text-white"
+        href="#"
+        data-toggle="modal"
+        data-target="#addCategory"
+      >
+        <span> ADD NEW CATEGORY</span>
+      </button>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i=0; i< categories.length; i++) { %>
+        <tr>
+          <th scope="row"><%=categories[i]._id %></th>
+          <td><%=categories[i].name %></td>
+          <td>
+            <a
+              href="/categories/<%= categories[i]._id %>?_method=DELETE"
+              onclick="return confirm('ARE YOU SURE')"
+              class="btn btn-danger rounded-0 text-white"
+              ><span>DELETE</span></a
+            >
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Add Category Modal -->
+<div
+  class="modal fade"
+  id="addCategory"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add New Category</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="request" class="main_form" method="POST" action="/categories">
+          <div class="row">
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Category Name"
+                type="type"
+                name="name"
+              />
+            </div>
+            <div class="col-md-12">
+              <button class="send_btn" type="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% } %> <% } %>
+<!-- end about -->
+<%- include('partials/_footer') -%>
