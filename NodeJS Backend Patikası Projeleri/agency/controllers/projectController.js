@@ -9,13 +9,6 @@ exports.getAllProjects = async (req, res) => {
     projects: projects
   });
 
-//console.log(req.query);
-//   const projects = await Project.find({}).sort('-dateCreated');
-//   console.log(projects),
-//   res.render('index', {
-    
-//     projects,
-//   }); 
 };
 
 exports.getProject = async (req, res) => {

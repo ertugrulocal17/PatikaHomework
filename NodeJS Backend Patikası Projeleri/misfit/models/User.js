@@ -21,14 +21,16 @@ const UserSchema = new Schema({
     enum: ["Student", "Trainer", "admin"],
     default: "Student",
   },
-  trainings:[{
-    type: mongoose.Schema.Types.ObjectId,
-    ref:'Training'
-  }],
+  trainings: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Training",
+    },
+  ],
 });
-UserSchema.pre('save', function (next) {
+UserSchema.pre("save", function (next) {
   const user = this;
-  if (!user.isModified('password')) return next();
+  if (!user.isModified("password")) return next();
 
   bcrypt.genSalt(10, function (err, salt) {
     if (err) return next(err);

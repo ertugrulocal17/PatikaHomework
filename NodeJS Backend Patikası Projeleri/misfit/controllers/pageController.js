@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-require('dotenv').config()
+require("dotenv").config();
 //const Training = require('../models/Training')
 exports.getIndexPage = (req, res) => {
   //const trainings = Training.find().sort('-createdAt').limit(2)
@@ -83,7 +83,7 @@ exports.sendEmail = async (req, res) => {
     res.status(200).redirect("contact");
   } catch (err) {
     //req.flash('error', `Something happend! ${err}`);
-    req.flash('error', `Something happend!`);
+    req.flash("error", `Something happend!`);
     res.status(200).redirect("contact");
   }
 };

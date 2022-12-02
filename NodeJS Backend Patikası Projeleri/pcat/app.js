@@ -1,26 +1,29 @@
 const express = require('express');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 const ejs = require('ejs');
 const fileUpload = require('express-fileupload');
 const methodOverride = require('method-override');
 require('dotenv').config();
-  
-const pageRoute = require('./routes/pageRoute')
-const photoRoute = require('./routes/photoRoute')
+
+const pageRoute = require('./routes/pageRoute');
+const photoRoute = require('./routes/photoRoute');
 
 const app = express();
 
 //connect DB
-mongoose.connect(`${process.env.MONGODB_LINK}`, {
-  useNewUrlParser: true,
-}).then(() => {
-  console.log('DB CONNECTED!')
-}).catch((err) => {
-  console.log(err)
-})
+mongoose
+  .connect(`${process.env.MONGODB_LINK}`, {
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    console.log('DB CONNECTED!');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 //Template Engine
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 
 //Middleware
 app.use(express.static('public'));
@@ -35,7 +38,7 @@ app.use(
 
 //Route
 app.use('/', pageRoute);
-app.use('/', photoRoute)
+app.use('/', photoRoute);
 
 const PORT = 3330;
 app.listen(PORT, () => {

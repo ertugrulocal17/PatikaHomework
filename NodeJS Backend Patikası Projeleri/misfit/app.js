@@ -1,73 +1,70 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const session = require('express-session')
-const MongoStore = require('connect-mongo');
-const flash = require('connect-flash');
-
-
-
+const express = require("express");
+const mongoose = require("mongoose");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
+const flash = require("connect-flash");
 //const fileUpload = require('express-fileupload')
-const methodOverride = require('method-override')
-require('dotenv').config()
+const methodOverride = require("method-override");
+require("dotenv").config();
 
-const pageRoute = require('./routes/pageRoute')
-const trainingRoute = require('./routes/trainingRoute')
-const categoryRoute = require('./routes/categoryRoute')
-const userRoute = require('./routes/userRoute')
+const pageRoute = require("./routes/pageRoute");
+const trainingRoute = require("./routes/trainingRoute");
+const categoryRoute = require("./routes/categoryRoute");
+const userRoute = require("./routes/userRoute");
 
-
-
-const app = express()
+const app = express();
 
 //connect DB
-mongoose.connect(`${process.env.MONGODB_LINK}`, {
-  useNewUrlParser: true,
-}).then(() => {
-  console.log('DB CONNECTED!')
-}).catch((err) => {
-  console.log(err)
-})
-
+mongoose
+  .connect(`${process.env.MONGODB_LINK}`, {
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    console.log("DB CONNECTED!");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 //Template Engine
-app.set('view engine', 'ejs')
+app.set("view engine", "ejs");
 global.userIN = null;
 
 //Middleware
-app.use(express.static('public'))
-app.use(express.json())
+app.use(express.static("public"));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
-    secret: 'my_keyboard_cat', // Buradaki texti değiştireceğiz.
+    secret: "my_keyboard_cat", 
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: `${process.env.MONGODB_LINK}`}),
+    store: MongoStore.create({ mongoUrl: `${process.env.MONGODB_LINK}` }),
   })
 );
 app.use(flash());
-app.use((req, res, next)=> {
+app.use((req, res, next) => {
   res.locals.flashMessages = req.flash();
   next();
-})
+});
 app.use(
-  methodOverride('_method', {
-    methods: ['POST', 'GET'],
+  methodOverride("_method", {
+    methods: ["POST", "GET"],
   })
 );
 
 //Route
-app.use('*', (req, res, next) => {
+app.use("*", (req, res, next) => {
   userIN = req.session.userID;
   next();
 });
-app.use('/', pageRoute)
-app.use('/trainings', trainingRoute)
-app.use('/categories', categoryRoute)
-app.use('/users', userRoute)
+app.use("/", pageRoute);
+app.use("/trainings", trainingRoute);
+app.use("/categories", categoryRoute);
+app.use("/users", userRoute);
 
 //Port
-const PORT = 3002
+const PORT = 3002;
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`)
-})
+  console.log(`Server started on port ${PORT}`);
+});

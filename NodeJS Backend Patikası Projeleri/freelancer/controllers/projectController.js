@@ -34,14 +34,6 @@ exports.getAllProjects = async (req, res) => {
   res.render('index', {
     projects: projects
   });
-
-//console.log(req.query);
-//   const projects = await Project.find({}).sort('-dateCreated');
-//   console.log(projects),
-//   res.render('index', {
-    
-//     projects,
-//   }); 
 };
 
 
